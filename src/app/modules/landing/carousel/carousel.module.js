@@ -28,7 +28,7 @@ export default class Carousel extends Component {
         <div onClick={() => this.props.moveTab(0)}>left</div>
         {this.pages.map(({ page, Component }) => {
           if (page === this.props.page) {
-            return <Component />;
+            return <Component key={page} />;
           }
         })}
         <div onClick={() => this.props.moveTab(1)}>right</div>
